@@ -16,6 +16,9 @@
 #include <asm/io.h>
 #include <linux/uaccess.h>
 
+// Support Linux kenel > 5.8.0 - tested ok on kernel 5.15.0-2
+#define HAVE_UNLOCKED_IOCTL 1
+
 #if LINUX_VERSION_CODE < KERNEL_VERSION(2,6,0)
 #include <linux/wrapper.h>
 #endif
